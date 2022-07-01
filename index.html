@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Final Project</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+<link href="stylesheet.css" rel="stylesheet">
+
+  </head>
+
+  <body onload=displayDate()>
+
+
+<header>
+  <span id="dateObject"></span>
+  <h1>
+    <strong>Trelli</strong>
+   
+  </h1>
+ 
+  <h3>
+    Task Planner
+  </h3>
+</header>
+  <!----------------starts of our grid--------------->
+  
+  <div class="container ">
+    <div class="row">
+      <div class="col-sm">
+
+    <div class="card" style="width: 18rem;" >
+  <div class="card-body">
+    <h5 class="card-title ">Task 1</h5>
+    
+    <!--Add a list in the card-->
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Task description
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Name</a></li>
+        <li><a class="dropdown-item" href="#">Description</a></li>
+        <li><a class="dropdown-item" href="#">Assignee</a></li>
+        <li><a class="dropdown-item" href="#">Due date</a></li>
+      </ul>
+    </div>
+
+    <!--end of the list within card-->
+
+    <br>
+    <a href="#" class="btn btn-warning">Edit Task</a>
+    <a href="#" class="btn btn-danger">Delete Task</a>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="col-sm">
+ <div class="card " style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Task 2</h5>
+    
+        <!--Add a list in the card-->
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Task description
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Name</a></li>
+            <li><a class="dropdown-item" href="#">Description</a></li>
+            <li><a class="dropdown-item" href="#">Assignee</a></li>
+            <li><a class="dropdown-item" href="#">Due date</a></li>
+          </ul>
+        </div>
+    
+        <!--end of the list within card-->
+<br>
+    <a href="#" class="btn btn-warning">Edit Task</a>
+    <a href="#" class="btn btn-danger">Delete Task</a>
+    </div>
+  </div>
+  </div>
+
+
+  <!--add third task------->
+
+  <div class="col-sm">
+
+    <div class="card " style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Task 3</h5>
+    
+    <!--Add a list in the card-->
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Task description
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Name</a></li>
+        <li><a class="dropdown-item" href="#">Description</a></li>
+        <li><a class="dropdown-item" href="#">Assignee</a></li>
+        <li><a class="dropdown-item" href="#">Due date</a></li>
+      </ul>
+    </div>
+
+    <!--end of the list within card-->
+
+    <br>
+    <a href="#" class="btn btn-warning">Edit Task</a>
+    <a href="#" class="btn btn-danger">Delete Task</a>
+  </div>
+  </div>
+</div>
+
+
+  <!-------end of 3 task-->
+
+</div>
+
+</div>
+</div>
+
+<!----------------End of our grid--------------->
+
+
+    <!-- Button trigger modal -->
+    <br>
+    <br>
+    <button 
+      type="button"
+      class="btn btn-primary button_task col-8"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      
+    >
+      Add Task
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Task!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >X</button>
+          </div>
+          <div class="modal-body">
+            <form id="taskForm">
+              <div class="mb-3">
+                <label for="firstName" class="form-label"
+                  >First Name</label
+                >
+                <input
+                  type="email"
+                  class="form-control firstName"
+                  id="firstName"
+                  aria-describedby="emailHelp"
+                />
+
+                <label for="exampleInputEmail1" class="form-label"
+                  >Last Name</label
+                >
+                <input
+                  type="email"
+                  class="form-control lastName"
+                  id="lastName"
+                  aria-describedby="emailHelp"
+                />
+
+                <label for="exampleInputEmail1" class="form-label"
+                  >Description:</label
+                >
+                <input
+                  type="textarea"
+                  class="form-control description"
+                  id="description"
+                  aria-describedby="emailHelp"
+                />
+
+                <label for="exampleInputEmail1" class="form-label"
+                  >Assigned to:</label
+                >
+                <input
+                  type="email"
+                  class="form-control assignedTo"
+                  id="assignedTo"
+                  aria-describedby="emailHelp"
+                />
+
+                <label for="exampleInputEmail1" class="form-label"
+                  >Due Date:</label
+                >
+                <input
+                  type="date"
+                  class="form-control dueDate"
+                  id="dueDate"
+                  aria-describedby="emailHelp"
+                />
+
+                <label for="exampleInputEmail1" class="form-label"
+                  >Status</label
+                >
+                
+                  
+              <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Select Status
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">To-Do</a></li>
+    <li><a class="dropdown-item" href="#">In progress</a></li>
+    <li><a class="dropdown-item" href="#">Review</a></li>
+    <li><a class="dropdown-item" href="#">Done</a></li>
+  </ul>
+</div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Reset Form
+            </button>
+            <button type="button" class="btn btn-primary submitButton" id="submitButton">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+ 
+    <script>
+
+     
+
+      console.log(submitButton)
+      
+      
+      submitButton.addEventListener('click', stringLength);
+      
+      function stringLength()
+      { 
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const description = document.getElementById('description').value;
+        const assignedTo = document.getElementById('assignedTo').value;
+        const dueDate = document.getElementById('dueDate').value;
+        const submitButton = document.getElementById('submitButton');
+        const form = document.getElementById('taskForm');
+        //let date = new Date();
+        //console.log(date);
+        
+        
+
+        if (firstName.length > 8){
+          alert("Please have a shorter name");
+        }
+      
+        if (description.length < 15) {
+          alert("Please have a longer description");
+        }
+
+        if (assignedTo.length < 8) {
+          alert("Please have a longer name");
+        }
+
+        if (dueDate === currentDate) {
+          alert("Please indicate later date");
+        }
+      
+      }
+      
+      function display_c(){
+let refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('displayDate()',refresh)
+}
+
+
+      function displayDate() {
+          let currentDate = new Date();
+          let todayDate = (`${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`);
+          todayDate = "Date: " + todayDate + " Time: " + currentDate.getHours( )+ ":" +  currentDate.getMinutes() + ":" +  currentDate.getSeconds();
+                    document.getElementById('dateObject').innerHTML = todayDate;   
+                    display_c();
+      }
+
+      displayDate();
+      
+          </script>
+
+  </body>
+</html>
